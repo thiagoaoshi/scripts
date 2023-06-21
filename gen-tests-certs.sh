@@ -55,3 +55,4 @@ generate_cert client "Client-only" "-extfile tests/tls/openssl.cnf -extensions c
 generate_cert redis "Generic-cert"
 
 [ -f tests/tls/redis.dh ] || openssl dhparam -out tests/tls/redis.dh 2048
+openssl pkcs12 -inkey tests/tls/redis.key -in tests/tls/redis.crt -export -out tests/tls/redis.pfx -password pass:password
