@@ -8,6 +8,9 @@
 #   tests/tls/server.{crt,key}      A certificate restricted for SSL server usage.
 #   tests/tls/redis.dh              DH Params file.
 
+#Definir senha para o pfx
+senhapfx=12345678
+
 generate_cert() {
     local name=$1
     local cn="$2"
@@ -55,4 +58,4 @@ generate_cert client "Client-only" "-extfile tests/tls/openssl.cnf -extensions c
 generate_cert redis "Generic-cert"
 
 [ -f tests/tls/redis.dh ] || openssl dhparam -out tests/tls/redis.dh 2048
-openssl pkcs12 -inkey tests/tls/redis.key -in tests/tls/redis.crt -export -out tests/tls/redis.pfx -password pass:password
+openssl pkcs12 -inkey tls/redis.key -in tls/redis.crt -export -out tls/redis.pfx -password pass:$senhapfx
