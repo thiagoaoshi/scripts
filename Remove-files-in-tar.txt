@@ -1,0 +1,4 @@
+# Script para uso em terminal windows
+# Remove arquivos *.img de dentro de arquivos .tar de forma recursiva utilizando o executavel do 7zip
+
+for /r %v in (*.tar) do "C:\Program Files\7-Zip\7z.exe" d "%v" *.img
