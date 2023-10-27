@@ -4,7 +4,7 @@ REM backup de base de dados mySQL utilizando dump no windows e zipando
  
 set dbUser=root
 set dbPassword=senha
-set database
+set database=name_db
 set backupDir="D:\BACKUP-MYSQL"
 set mysqldump="C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqldump.exe"
 set mysqlDataDir="C:\ProgramData\MySQL\MySQL Server 8.0\Data"
