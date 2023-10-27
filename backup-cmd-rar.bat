@@ -1,4 +1,5 @@
 ## script de backup simples, que cria o backup em um zip e limpa os backups com mais de 30 dias
+## precisa do executavel do rar.exe no local do batch ou colocar no path do windows
 
 REM BACKUP do WWWROOT
 REM setando data no formato brasileiro
