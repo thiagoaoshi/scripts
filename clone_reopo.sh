@@ -11,7 +11,12 @@
 # Clone repositorio privado usando ssh
 git clone git@github.com:your_username/your_repository.git
 
+# aceitar o fingerprint automaticamente sem interassao
+# ssh-keyscan -t rsa ${REMOTE_HOST} >> ~/.ssh/known_hosts
+
+
 # formas de conectar/autenticar no git:
 # ssh-agent bash -c 'ssh-add /somewhere/yourkey; git clone git@github.com:user/project.git'
 # ssh-agent $(ssh-add /somewhere/yourkey; git clone git@github.com:user/project.git)
 # GIT_SSH_COMMAND='ssh -i private_key_file -o IdentitiesOnly=yes' git clone user@host:repo.git
+
