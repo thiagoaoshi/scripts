@@ -1,5 +1,5 @@
 #!/bin/bash
-export REGION=
+export REGION=us-west1
 
 # Define color variables
 
